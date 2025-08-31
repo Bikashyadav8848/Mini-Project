@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    double a,b;
+    char operation;
+    
+    printf("Enter 1st num: ");
+    scanf("%lf",&a);
+    printf("Enter operarion(+,-,*,/): ");
+    scanf(" %c", &operation);
+    printf("Enter 2nd num: ");
+    scanf("%lf",&b);
+    
+    switch(operation){
+        
+        case '+':
+        printf("%.2lf + %.2lf = %.4lf",a,b,a+b);
+        break;
+        
+        case '-':
+        printf("%.2lf + %.2lf = %.4lf",a,b,a-b);
+        break;
+        
+        case '*':
+        printf("%.2lf + %.2lf = %.4lf",a,b,a*b);
+        break;
+        
+        case '/':
+        if( b != 0){
+        printf("%.2lf + %.2lf = %.4lf",a,b,a/b);
+        }else{
+            printf("Error! you can't divide by zero(0)");
+        }
+        break;
+    }
+
+    return 0;
+}
